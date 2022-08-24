@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <div class="container-fluid">
+      <% const message = 'Hello World JavaScript Message' %>
+      <ul>
+        <li><h1><%= message %></h1></li>
+        <li><h3>Curso NodeJS</h3></li>
+        <li><h4>24/08/2022</h4></li>
+      </ul>
+
+      <% if (users.length > 0 ) { %> <% users.forEach(user => { %>
+      <h3 class="title"><%= user.firstName %> <%= user.lastName %></h3>
+      <p><%= user.email %></p>
+      <% }) %> <% } else { %>
+      <p>Não há usuários para exibir...</p>
+      <% } %>
+    </div>
+  </body>
+</html>
