@@ -13,28 +13,45 @@
 
 ## Utilizar o Container do Projeto
 
-### Passo 1 - Download do Docker
+### Passo 1 - Download do NodeJS
 
 -Faça o Download no link abaixo.
-`<link>` : <https://www.docker.com/products/docker-desktop/>
+`<link>` : <https://nodejs.org/en/download/>
 
-### Passo 2 - Instalar o Docker na sua máquina
+### Passo 2 - Instalar o NodeJS na sua máquina
 
--Siga os passos orientados na Documentação oficial do Docker. Na grande maioria dos casos a instalação básica é suficiente. Baste seguir próximo até o final.
+-Siga os passos orientados na Documentação oficial do NodeJS. Na grande maioria dos casos a instalação básica é suficiente. Baste clicar em próximo até o final.
 
-`<link>`: https://docs.docker.com/desktop/install/windows-install/
+`<link>`: https://nodejs.dev/en/learn/how-to-install-nodejs/
 
-### Passo 3 - Download do container para a sua máquina
+### Passo 3 - Baixar o repositório na sua máquina.
 
--O containe pode ser baixado na sua máquina facilmente. Basta abrir o terminal no linux ou prompt de comando no windows e executar os seguintes comandos:
+- Você pode utilizar esse repositório em sua máquina por seguir o seguinte processor.
+- Crie uma pasta no seu computador e acesse essa pasta.
+- Clique com o botão direito e clique na opção `Git Bash Here`.
+- Uma tela de terminal será aberta. Nessa tela digite o seguinte comando:
 
-`docker pull tarishenrique/nodetaris1:1.0`
+`git clone https://github.com/tarishenrique/cursonodejs.git`
 
-`docker run -p 49160:8080 -d -it tarishenrique/nodetaris1:1.0`
+- O repositório será baixado para a pasta selecionada.
+
+- Abra o Visual Studio Code e clique em Arquivo/Abrir Pasta ... e selecione a pasta do projeto.
+
+- Ainda dentro do Visual Code, abra o Terminal e execute a instalação dos módulos necessarios
+
+`npm instal`
+
+- Aguarda a instalação de todos os módulos e por fim inicie o Servidor no NodeJS atrávés do comando:
+
+`npm run start:dev`
+
+- Se tudo acontecer corretamente a seguintes mensagem deverá aparecer no terminar
+
+`Rodando com Express na porta 8080!`
 
 ### Passo 4 - Abrir o projeto no navegador
 
 -A partir desse momento você deve estar com o container do projeto aberto. Basta agora ir ao navegar e acessar os seguintes endereços:
 
-`<Página Inicial>` : <http://localhost:49160/>
-`<JSON com retorno dos Usuários>` : http://localhost:49160/users
+`<Página Inicial>` : <http://localhost:8080/>
+`<JSON com retorno dos Usuários>` : http://localhost:8080/users
