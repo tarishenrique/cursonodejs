@@ -39,7 +39,7 @@
 
 - Ainda dentro do Visual Code, abra o Terminal e execute a instalação dos módulos necessarios
 
-`npm instal`
+`npm install`
 
 - Aguarda a instalação de todos os módulos e por fim inicie o Servidor no NodeJS atrávés do comando:
 
