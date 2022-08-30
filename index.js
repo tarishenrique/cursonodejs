@@ -1,5 +1,6 @@
 //const { Person } = require("./person");
 const dotenv = require("dotenv");
+const connString = process.env.MONGODB_CONNSTRING;
 const connectToDatabase = require("./src/database/connect");
 
 dotenv.config();

@@ -5,3 +5,7 @@ MONGODB_HOST=cursonodejs2022.ckpxmyo.mongodb.net
 MONGODB_USERNAME=mongoadmin
 MONGODB_PASSWORD=secret
 MONGODB_HOST=localhost
+
+MONGODB_USERNAME=mongoadmin
+MONGODB_PASSWORD=secret
+MONGODB_HOST=localhost:27017
