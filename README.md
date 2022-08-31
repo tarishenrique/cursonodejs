@@ -32,21 +32,19 @@
 
 ### Passo 4 - Criar base de dados
 
-- Vá até o site https://www.mongodb.com/ , crie sua conta e faça o login.
+- Vá ao terminal e faça a pesquisa da imagem do MongoDB no docker
 
-- Dentro do Menu Deployment / Database clique em "Build a Database" ou "Create".
+`docker search mongo `
 
-- Selecione a opção "Shared" => "AWS" => "São Paulo" e na aba Cluster Name escolha um nome para a Base de Dados.
+- Verifique se a imagem foi baixada corretamente com o comando
 
-- Na próxima aba digite um usuário e senha para acessar a sua base de dados.
+`docker images`
 
-- Em IP Adress digite o endereço 0.0.0.0/0
+- Anote um usuário e senha para utilizar no acesso ao Banco de Dados. Após isso inicialize o container atribuindo a porta padrão do docker 27017 e nome de usuário e senha que você escolheu. Vamos utilizar como exemplo o usuário: mongoadmin, senha: secret .
 
-- Clique em Finish and Close
+`docker run -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=secret mongo`
 
-- Agora clique em Connect/ Connect your application e anote o endereço entre o "@" e "/?"
-
-### Passo 5 - Baixar o repositório na sua máquina.
+### Passo 5 - Baixar o repositório na sua máquina e criar container.
 
 - Você pode utilizar esse repositório em sua máquina por seguir o seguinte processor.
 - Crie uma pasta no seu computador e acesse essa pasta.
@@ -67,9 +65,9 @@
 
 `docker build . -t node-web-app-exemplo`
 
-- Execute a imagem com a utilização do usuário, senha e endereço de host do seu banco de dados.
+- Execute a imagem com a utilização do usuário, senha e endereço de IP do seu computador (exemplo 192.168.0.10).
 
-`docker run -e MONGODB_USERNAME="usuário" -e MONGODB_PASSWORD="senha" -e MONGODB_HOST="endereço_do_host" -p 8080:8080 -d -it node-web-app-exemplo`
+`docker run -p 8080:8080 -e MONGODB_CONNSTRING=mongodb://mongoadmin:secret@192.168.0.10:27017/?authMechanism=DEFAULT node-web-app-exemplo`
 
 ### Passo 6 - Abrir o projeto no navegador
 
